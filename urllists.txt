@@ -1,0 +1,67 @@
+// Three pairs (six restaurants) in the same categories (call this “1 set”)
+// Three or four sets
+
+//Set 1:	American (New) Sandwiches
+
+//3.5 stars.
+http://www.yelp.com/biz/calafia-café-and-market-a-go-go-palo-alto-2    
+//3.5 stars.
+http://www.yelp.com/biz/mayfield-bakery-and-cafe-palo-alto
+
+//4 stars.
+http://www.yelp.com/biz/ikes-place-stanford-3
+//4 stars
+http://www.yelp.com/biz/st-michaels-alley-palo-alto
+
+//4 stars.
+http://www.yelp.com/biz/los-altos-grill-los-altos
+//4 stars.
+http://www.yelp.com/biz/sprout-cafe-palo-alto
+
+//Set 2:	Chinese
+//4 stars
+http://www.yelp.com/biz/amber-india-restaurant-mountain-view
+//4 stars
+http://www.yelp.com/biz/chef-chus-los-altos
+
+//3.5 stars
+http://www.yelp.com/biz/fu-lam-mum-mountain-view
+//3.5 stars
+http://www.yelp.com/biz/queen-house-mountain-view
+
+//4 stars 
+http://www.yelp.com/biz/san-tung-chinese-restaurant-san-francisco
+//4 stars
+http://www.yelp.com/biz/the-chairman-truck-san-francisco
+
+//Set 3:	Barbeque
+//3.5 Stars
+http://www.yelp.com/biz/memphis-minnies-san-francisco
+//3.5 Stars
+http://www.yelp.com/biz/baby-blues-bbq-san-francisco
+
+//3 Stars
+http://www.yelp.com/biz/roadside-bbq-san-francisco
+//3 Stars
+http://www.yelp.com/biz/paragon-restaurant-and-bar-san-francisco
+
+//4 Stars
+http://www.yelp.com/biz/fette-sau-brooklyn
+//4 Stars
+http://www.yelp.com/biz/dinosaur-bar-b-que-new-york-2
+
+//Set 4: Janpanese
+//4.5 Stars
+http://www.yelp.com/biz/sushi-yasuda-new-york
+//4.5 Stars
+http://www.yelp.com/biz/sakagura-new-york
+
+//4 Stars
+http://www.yelp.com/biz/totto-ramen-new-york
+//4 Stars
+http://www.yelp.com/biz/morimoto-new-york
+
+//4 Stars
+http://www.yelp.com/biz/kyotofu-new-york
+//4 Stars
+http://www.yelp.com/biz/yakitori-taisho-new-york
