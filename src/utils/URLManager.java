@@ -1,5 +1,8 @@
 package utils;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -10,7 +13,7 @@ public class URLManager {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		URLManager.getInstance();
 	}
 	
 	public static URLManager singleton;
@@ -30,6 +33,27 @@ public class URLManager {
 	public URLManager(){
 		URLList = new ArrayList<String>();
 		ProcessStack = new Stack<String>();
+		loadFile("./urllists.txt");
+		System.out.println(URLList.size());
+		for(String tmp : URLList){
+			System.out.println(tmp);
+		}
+	}
+	
+	public void loadFile(String path){
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(path));
+			String line = "";
+			while((line = br.readLine()) != null){
+				if(line.isEmpty() || line.startsWith("//")){
+					continue;
+				}
+				URLList.add(line);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
