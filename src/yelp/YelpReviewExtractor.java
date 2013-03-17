@@ -1,5 +1,6 @@
 package yelp;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.jsoup.Jsoup;
@@ -19,7 +20,8 @@ public class YelpReviewExtractor {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		YelpReviewExtractor.getInstance().DownloadReviews("http://www.yelp.com/biz/calafia-caf%C3%A9-and-market-a-go-go-palo-alto-2");
+
+		//YelpReviewExtractor.getInstance().DownloadReviews("http://www.yelp.com/biz/calafia-caf%C3%A9-and-market-a-go-go-palo-alto-2");
 	}	
 	
 	
@@ -29,6 +31,10 @@ public class YelpReviewExtractor {
 		if (singleton == null)
 			singleton = new YelpReviewExtractor();
 		return singleton;
+	}
+	
+	public YelpReviewExtractor(){
+		File dir = IOOperator.createDir(ParameterSetting.DOWNLOADSRC + "/" + ParameterSetting.YELPREVTEXTSRC);
 	}
 	
 	public void DownloadReviews(String restaurant_url){
@@ -110,11 +116,11 @@ public class YelpReviewExtractor {
 				System.out.println("userrating : " + userrating);
 				String publishtime = usrrating_html.get(1).attr("content");
 				System.out.println("published time: " + publishtime);
-				Elements friend_counter_html = li.getElementsByAttributeValue("class", "i-wrap i-friend-count-wrap");
+				Elements friend_counter_html = li.getElementsByAttributeValue("class", "i-wrap ig-wrap-common i-friends-orange-common-wrap");
 				String friend_counter = friend_counter_html.get(0).text().split(" ")[0];
 				System.out.println("friend_counter : " + friend_counter);
 				
-				Elements review_counter_html = li.getElementsByAttributeValue("class", "i-wrap i-review-count-wrap");
+				Elements review_counter_html = li.getElementsByAttributeValue("class", "i-wrap ig-wrap-common i-user-review-count-common-wrap");
 				String review_counter = review_counter_html.get(0).text().split(" ")[0];
 				System.out.println("review_counter : " + review_counter);
 				

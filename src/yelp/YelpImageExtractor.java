@@ -30,6 +30,10 @@ public class YelpImageExtractor {
 	
 	int curimg_index = 0;
 	
+	public YelpImageExtractor(){
+		File dir = IOOperator.createDir(ParameterSetting.DOWNLOADSRC + "/" + ParameterSetting.YELPREVTEXTSRC);
+	}
+	
 	public void DownloadResturantImages(String restaurant_url){
 		curimg_index = 0;
 		String[] rest_img_info =  ExtractRestImgInfo(restaurant_url);
