@@ -18,7 +18,7 @@ public class YelpImageExtractor {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		YelpImageExtractor.getInstance().DownloadResturantImages("http://www.yelp.com/biz/calafia-caf%C3%A9-and-market-a-go-go-palo-alto-2");
 	}
 	
 	public static YelpImageExtractor singleton;
@@ -29,9 +29,10 @@ public class YelpImageExtractor {
 	}
 	
 	int curimg_index = 0;
+	String outputDir = ParameterSetting.DOWNLOADSRC + "/" + ParameterSetting.YELPIMGSRC;
 	
 	public YelpImageExtractor(){
-		File dir = IOOperator.createDir(ParameterSetting.DOWNLOADSRC + "/" + ParameterSetting.YELPREVTEXTSRC);
+		File dir = IOOperator.createDir(outputDir);
 	}
 	
 	public void DownloadResturantImages(String restaurant_url){
@@ -39,7 +40,6 @@ public class YelpImageExtractor {
 		String[] rest_img_info =  ExtractRestImgInfo(restaurant_url);
 		if(rest_img_info == null || rest_img_info.length != 2)
 			return;
-		File dir = IOOperator.createDir(rest_img_info[1]);
 		int totalDoneImages = ExtractImgInonePage(rest_img_info[0], rest_img_info[1]);
 		int emptyloop_counter = 0;
 		while(true){
@@ -154,7 +154,7 @@ public class YelpImageExtractor {
 					
 				
 				String content = String.valueOf(curimg_index + i) + "\t" + authorId + "\t" + commentfromUser + "\n";
-				String logFileName= entity_name + "/"+ "log.txt";
+				String logFileName=outputDir+"/" + entity_name + "/"+ "log.txt";
 				IOOperator.writeToFile(logFileName, content, true);
 				extracted_counter++;
 				System.out.println(curimg_index + i);
@@ -176,9 +176,8 @@ public class YelpImageExtractor {
 
 	private void download_image(String img_url, String dir_name, String fileName){
 		String imageUrl = img_url;
-		File dir = IOOperator.createDir(dir_name);
-		String destinationFile = dir_name + "/" + fileName;
-		System.out.println(destinationFile);
+		File dir = IOOperator.createDir(outputDir + "/" + dir_name);
+		String destinationFile =outputDir+"/" + dir_name + "/" + fileName;
 		try {
 			IOOperator.saveImage(imageUrl, destinationFile);
 		} catch (IOException e) {

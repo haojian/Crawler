@@ -21,7 +21,7 @@ public class YelpReviewExtractor {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//YelpReviewExtractor.getInstance().DownloadReviews("http://www.yelp.com/biz/calafia-caf%C3%A9-and-market-a-go-go-palo-alto-2");
+		YelpReviewExtractor.getInstance().DownloadReviews("http://www.yelp.com/biz/calafia-caf%C3%A9-and-market-a-go-go-palo-alto-2");
 	}	
 	
 	
@@ -32,18 +32,22 @@ public class YelpReviewExtractor {
 			singleton = new YelpReviewExtractor();
 		return singleton;
 	}
+	String outputDir = ParameterSetting.DOWNLOADSRC + "/" + ParameterSetting.YELPREVTEXTSRC;
 	
 	public YelpReviewExtractor(){
-		File dir = IOOperator.createDir(ParameterSetting.DOWNLOADSRC + "/" + ParameterSetting.YELPREVTEXTSRC);
+		File dir = IOOperator.createDir(outputDir);
 	}
 	
 	public void DownloadReviews(String restaurant_url){
 		int doneReviewCounter = 0;
 		int finishCheckerCounter = 0;
 		doneReviewCounter += ExtractReviewsinOnePage(restaurant_url);
+		String targetUrl = restaurant_url;
 		while(true){
-			String tmp  =  GetNextPageURL(restaurant_url);
-			int nextPageCounter = ExtractReviewsinOnePage(restaurant_url);
+			targetUrl  =  GetNextPageURL(targetUrl);
+			System.out.println(targetUrl);
+			
+			int nextPageCounter = ExtractReviewsinOnePage(targetUrl);
 			doneReviewCounter += nextPageCounter;
 			//Empty loop checker
 			if(nextPageCounter == 0){
@@ -54,6 +58,7 @@ public class YelpReviewExtractor {
 				break;
 			}
 			System.out.println(doneReviewCounter);
+			
 		}
 	}
 
@@ -169,7 +174,7 @@ public class YelpReviewExtractor {
 				}
 				
 				content = tmp_entry.toOutPutString();
-				IOOperator.writeToFile(filename, content, true);
+				IOOperator.writeToFile(outputDir + "/" + filename, content, true);
 				System.out.println("Output: " + content);
 				content = "";
 			}			
