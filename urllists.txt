@@ -1,10 +1,10 @@
-// Three pairs (six restaurants) in the same categories (call this “1 set”)
+// Three pairs (six restaurants) in the same categories (call this 鈥� set鈥�
 // Three or four sets
 
 //Set 1:	American (New) Sandwiches
 
 //3.5 stars.
-http://www.yelp.com/biz/calafia-café-and-market-a-go-go-palo-alto-2    
+http://www.yelp.com/biz/calafia-caf%C3%A9-and-market-a-go-go-palo-alto-2    
 //3.5 stars.
 http://www.yelp.com/biz/mayfield-bakery-and-cafe-palo-alto
 
