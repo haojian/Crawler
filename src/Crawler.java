@@ -19,7 +19,7 @@ public class Crawler {
 		ArrayList<String> urllist = URLManager.getInstance().URLList;
 		for(String tmp:urllist){
 			YelpReviewExtractor.getInstance().DownloadReviews(tmp);
-			YelpImageExtractor.getInstance().DownloadResturantImages(tmp);
+			//YelpImageExtractor.getInstance().DownloadResturantImages(tmp);
 		}
 	}
 

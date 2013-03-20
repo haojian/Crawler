@@ -174,7 +174,7 @@ public class YelpReviewExtractor {
 				}
 				
 				content = tmp_entry.toOutPutString();
-				IOOperator.writeToFile(outputDir + "/" + filename, content, true);
+				IOOperator.writeToFileUTF8(outputDir + "/" + filename, content, true);
 				System.out.println("Output: " + content);
 				content = "";
 			}			

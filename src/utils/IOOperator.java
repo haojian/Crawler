@@ -1,9 +1,11 @@
 package utils;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.URL;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -37,6 +39,18 @@ public class IOOperator {
 		}
 	}
 	
+	public static void writeToFileUTF8(String filename, String content, boolean isappend){
+		BufferedWriter out;
+		try {
+			 out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename, isappend), "UTF-8"));
+			 out.write(content);
+			 out.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public static File createDir(String dirStr){
 		File tmp = new File(dirStr);
 		if(tmp.exists() && tmp.isDirectory())
@@ -47,6 +61,8 @@ public class IOOperator {
 		}else
 			return null;
 	}
+	
+	
 	
 	public static void saveImage(String imageUrl, String destinationFile) throws IOException {
 		URL url = new URL(imageUrl);
