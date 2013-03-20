@@ -33,7 +33,7 @@ public class URLManager {
 	public URLManager(){
 		URLList = new ArrayList<String>();
 		ProcessStack = new Stack<String>();
-		loadFile("./urllists.txt");
+		loadFile("./urllists_1.txt");
 		System.out.println(URLList.size());
 		for(String tmp : URLList){
 			System.out.println(tmp);
