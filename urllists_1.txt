@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿http://www.yelp.com/biz/animal-los-angeles
 http://www.yelp.com/biz/bi-rite-creamery-san-francisco
 http://www.yelp.com/biz/bottega-louie-los-angeles
@@ -21,4 +22,29 @@ http://www.yelp.com/biz/tartine-bakery-san-francisco
 http://www.yelp.com/biz/the-house-san-francisco
 http://www.yelp.com/biz/titos-tacos-culver-city
 http://www.yelp.com/biz/tonys-pizza-napoletana-san-francisco
+=======
+﻿http://www.yelp.com/biz/animal-los-angeles
+http://www.yelp.com/biz/bi-rite-creamery-san-francisco
+http://www.yelp.com/biz/bottega-louie-los-angeles
+http://www.yelp.com/biz/brendas-french-soul-food-san-francisco
+http://www.yelp.com/biz/bruxie-orange-3
+http://www.yelp.com/biz/crisp-chicago
+http://www.yelp.com/biz/daikokuya-los-angeles
+http://www.yelp.com/biz/el-taurino-los-angeles
+http://www.yelp.com/biz/griddle-cafe-los-angeles
+http://www.yelp.com/biz/ippudo-ny-new-york
+http://www.yelp.com/biz/kokkari-estiatorio-san-francisco-2
+http://www.yelp.com/biz/manuels-original-el-tepeyac-cafe-los-angeles
+http://www.yelp.com/biz/newport-tan-cang-seafood-restaurant-san-gabriel-2
+http://www.yelp.com/biz/philippe-the-original-restaurant-los-angeles
+http://www.yelp.com/biz/phils-bbq-san-diego-2
+http://www.yelp.com/biz/providence-los-angeles-2
+http://www.yelp.com/biz/smoque-bbq-chicago
+http://www.yelp.com/biz/soowon-galbi-kbbq-restaurant-los-angeles-2
+http://www.yelp.com/biz/sushi-gen-los-angeles
+http://www.yelp.com/biz/tartine-bakery-san-francisco
+http://www.yelp.com/biz/the-house-san-francisco
+http://www.yelp.com/biz/titos-tacos-culver-city
+http://www.yelp.com/biz/tonys-pizza-napoletana-san-francisco
+>>>>>>> update
 http://www.yelp.com/biz/umami-burger-los-angeles
