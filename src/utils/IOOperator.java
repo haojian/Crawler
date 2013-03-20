@@ -1,16 +1,28 @@
 package utils;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
 public class IOOperator {
+	
+	public static void main(String[] args) {
+		File dir = IOOperator.createDir("UTF8");
+		transformFiles("total", "UTF8");
+	}
+	
 	public static void writeToFile(String filename, String content, boolean isappend){
 		FileWriter writer;
 		try {
@@ -79,4 +91,40 @@ public class IOOperator {
 		is.close();
 		os.close();
 	}
+	
+	
+	public static void ConvertFiletoUTF8(String srcpath, String outpath){
+		System.out.println(Charset.defaultCharset());
+		String charset = "GBK";
+		
+		
+	}
+	
+	
+	public static void transformFiles(String inputDir, String outputDir){
+		File dir = new File(inputDir);
+		File[] lists = dir.listFiles();
+		for(File tmp : lists){
+			File target = new File(outputDir + "/" + tmp.getName());
+			ConvertFiletoUTF8(tmp, "GBK", target, "UTF8");			
+		}
+	}
+	
+	public static void ConvertFiletoUTF8(File source, String srcEncoding, File target, String tgtEncoding) {
+	    BufferedReader br = null;
+	    BufferedWriter bw = null;
+	    try{
+	        br = new BufferedReader(new InputStreamReader(new FileInputStream(source), "GBK"));
+	        bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(target), tgtEncoding));
+	        char[] buffer = new char[16384];
+	        int read;                               
+	        while ((read = br.read(buffer)) != -1)
+	            bw.write(buffer, 0, read);
+	        br.close();
+	        bw.close();
+	    } catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 }
