@@ -1,0 +1,16 @@
+Specialties:Linux/Unix, C++, STL, Python, JavaScript, .Net, Node.js, MySql, Web Architecture, Machine Learning
+
+Currently in seeking of Software Development Engineer position.
+
+With working knowledges in back-end service (Server/SQL/Text Processing) to front-end interface (Web/Mobile(windows phone, iOS)). Passionate about rapid prototyping.
+
+Specialties: Text Mining, Behavior Modeling, Natural Language Processing (English/Chinese), Information Visualization, Experimental Design, Human Computer Interaction, Information Retrieval, Rapid Prototyping, Social Computing.
+Programming Language: Java, C#, C, C++, Javascript, Python.
+
+
+
+> Web front-end technologies (e.g. JQuery, Java Script, CSS, HTML5, etc)
+> Back-end technologies (e.g. PHP, LAMP, MySQL, etc)
+> Traditional Programming Languages (e.g. Java, C, Objective-C, etc)
+> Scripting Languages (e.g. Python, Perl, etc)
+> Web App Frameworks (e.g. Django, Ruby on Rails, etc)
